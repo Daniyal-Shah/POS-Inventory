@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainWinController">
+   <children>
+      <AnchorPane prefHeight="508.0" prefWidth="117.0" style="-fx-background-color: #151928;">
+         <children>
+            <ImageView fitHeight="65.0" fitWidth="72.0" layoutX="23.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/profile.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="username" layoutX="23.0" layoutY="198.0" prefHeight="30.0" prefWidth="91.0" text="" textFill="#3c58fa">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="out" buttonType="RAISED" layoutX="9.0" layoutY="243.0" onAction="#logOut" prefHeight="25.0" prefWidth="91.0" ripplerFill="#3c4368" style="-fx-background-color: #3C58FA;" text="Log Out" textFill="WHITE" />
+            <ImageView fitHeight="27.0" fitWidth="25.0" layoutX="13.0" layoutY="444.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/calendar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="date" layoutX="42.0" layoutY="444.0" prefHeight="25.0" prefWidth="79.0" text="12-21-2020" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="121.0" prefHeight="74.0" prefWidth="880.0" style="-fx-background-color: #a0a2ab;">
+         <children>
+            <ImageView fitHeight="59.0" fitWidth="54.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/home.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="83.0" layoutY="20.0" prefHeight="17.0" prefWidth="228.0" text="DASHBOARD" textFill="#151928">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="close" buttonType="RAISED" layoutX="827.0" layoutY="11.0" onAction="#closeWin" prefHeight="35.0" prefWidth="48.0" text="." textFill="#a0a2ab">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="pos" layoutX="192.0" layoutY="150.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            
+                              <ImageView fitHeight="119.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/payment-terminal.png" />
+               </image>
+            </ImageView>
+         </graphic></JFXButton>
+      <Label layoutX="234.0" layoutY="111.0" prefHeight="17.0" prefWidth="131.0" text="Point of sale">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="548.0" layoutY="111.0" prefHeight="27.0" prefWidth="106.0" text="Products">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="793.0" layoutY="111.0" prefHeight="17.0" prefWidth="131.0" text="Categories">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="product" layoutX="471.0" layoutY="153.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <graphic>
+            <ImageView fitHeight="108.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/box.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="category" layoutX="744.0" layoutY="155.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <graphic>
+            <ImageView fitHeight="109.0" fitWidth="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/list.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="inventory" layoutX="744.0" layoutY="347.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="119.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/stock%20(1).png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="sr" layoutX="471.0" layoutY="347.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="119.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/investment.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="dsr" layoutX="192.0" layoutY="347.0" onAction="#handleButton" prefHeight="127.0" prefWidth="228.0" stylesheets="@cssForGlyphIcons.css" text="." textFill="#eeeeee">
+         <font>
+            <Font size="10.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="119.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/stock.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <Label layoutX="793.0" layoutY="304.0" prefHeight="17.0" prefWidth="131.0" text="Inventory">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="520.0" layoutY="304.0" prefHeight="17.0" prefWidth="131.0" text="Stocks records">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="241.0" layoutY="304.0" prefHeight="17.0" prefWidth="131.0" text="Sales reports">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>
