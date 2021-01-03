@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="613.0" prefWidth="1131.0" style="-fx-background-color: #151928;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProductController">
+   <children>
+      <TableView fx:id="proTable" layoutY="123.0" prefHeight="489.0" prefWidth="939.0" style="-fx-background-color: #151928;" stylesheets="@tableCss.css">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="95.0" text="ID" />
+          <TableColumn fx:id="name" minWidth="0.0" prefWidth="164.99996948242188" text="Name" />
+            <TableColumn fx:id="desc" minWidth="0.0" prefWidth="169.0" text="Description" />
+            <TableColumn fx:id="unitPrice" minWidth="0.0" prefWidth="117.0" text="Unit Price" />
+            <TableColumn fx:id="stockIn" minWidth="0.0" prefWidth="123.0" text="Stock In" />
+            <TableColumn fx:id="stockOut" minWidth="0.0" prefWidth="136.0" text="Stock Out" />
+            <TableColumn fx:id="pCategory" minWidth="0.0" prefWidth="133.0" text="Category" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutY="-6.0" prefHeight="117.0" prefWidth="1154.0" style="-fx-background-color: #151928;">
+         <children>
+            <JFXButton fx:id="newItem" buttonType="RAISED" layoutX="14.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA;" stylesheets="@posCss.css" text="New" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="updateItem" buttonType="RAISED" layoutX="137.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA;" stylesheets="@posCss.css" text="Update" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="deleteItem" buttonType="RAISED" layoutX="260.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA;" stylesheets="@posCss.css" text="Delete" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="closeButton" buttonType="RAISED" layoutX="378.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA;" stylesheets="@posCss.css" text="Close" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXTextField fx:id="pSearch" focusColor="WHITE" layoutX="924.0" layoutY="63.0" prefHeight="30.0" prefWidth="178.0" style="-fx-background-color: #ffffff;" unFocusColor="BLACK">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="97.0" layoutY="13.0" prefHeight="36.0" prefWidth="111.0" text="Products" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="950.0" layoutY="30.0" prefHeight="25.0" prefWidth="57.0" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="supplier" buttonType="RAISED" layoutX="507.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA;" stylesheets="@posCss.css" text="Supplier" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="refresh" buttonType="RAISED" layoutX="627.0" layoutY="63.0" onAction="#onAction" prefHeight="40.0" prefWidth="93.0" style="-fx-background-color: #3C58FA; -fx-font-size: 14;" stylesheets="@posCss.css" text="Refresh" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="49.0" fitWidth="78.0" layoutX="46.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/products.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="close" layoutX="1102.0" layoutY="9.0" onAction="#closeWin" prefHeight="25.0" prefWidth="38.0" text=".">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/remove.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="909.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/magnifying-glass.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="938.0" layoutY="127.0" prefHeight="481.0" prefWidth="203.0">
+         <children>
+            <AnchorPane layoutY="-3.0" prefHeight="489.0" prefWidth="216.0" style="-fx-background-color: #151928; -fx-border-color: #ffffff;">
+               <children>
+                  <ImageView fx:id="imv" fitHeight="139.0" fitWidth="203.0" layoutX="6.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true" />
+                  <AnchorPane layoutX="3.0" layoutY="148.0" prefHeight="336.0" prefWidth="201.0" style="-fx-background-color: #151928; -fx-border-color: #ffffff;">
+                     <children>
+                        <Label layoutX="8.0" layoutY="11.0" prefHeight="30.0" prefWidth="30.0" text="ID" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="idLab" layoutX="130.0" layoutY="7.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="48.0" prefHeight="30.0" prefWidth="57.0" text="Name" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameLb" layoutX="130.0" layoutY="44.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="290.0" prefHeight="30.0" prefWidth="57.0" text="Supplier" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="supLab" layoutX="130.0" layoutY="290.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="87.0" prefHeight="30.0" prefWidth="78.0" text="Descirption" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="descLab" layoutX="130.0" layoutY="87.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="129.0" prefHeight="30.0" prefWidth="67.0" text="Unit Price" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="upLab" layoutX="130.0" layoutY="129.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="176.0" prefHeight="30.0" prefWidth="57.0" text="Stock In" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="stkInLab" layoutX="129.0" layoutY="172.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="214.0" prefHeight="30.0" prefWidth="67.0" text="Stock Out" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="stkOutLab" layoutX="129.0" layoutY="208.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="8.0" layoutY="253.0" prefHeight="30.0" prefWidth="67.0" text="Category" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="ctLab" layoutX="130.0" layoutY="249.0" prefHeight="30.0" prefWidth="78.0" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
