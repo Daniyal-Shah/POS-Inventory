@@ -151,7 +151,7 @@ public class MainWinController implements Initializable {
             win.setScene(sc);
             win.show();
         }
-	
+	//Inventory feature by Ali
 	else if(event.getSource()==inventory)
 	{
           String qu="";
